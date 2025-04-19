@@ -1,7 +1,8 @@
 // express.js
 const express = require("express");
 const app = express();
-const port = 3000;
+require('dotenv').config();
+const port = process.env.PORT || 3000;
 const connection = require("./database");
 // Middleware para interpretar JSON
 app.use(express.json());
