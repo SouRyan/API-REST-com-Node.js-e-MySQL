@@ -25,7 +25,7 @@ Esta é uma API REST simples para gerenciamento de funcionários, construída co
      ```
 
 4. Configure as variáveis de ambiente:
-   - Copie o arquivo `.env.example` para um novo arquivo chamado `.env`
+   - Copie o arquivo `.example.env` para um novo arquivo chamado `.env`
    - Edite o arquivo `.env` com suas configurações de banco de dados:
      ```
      DB_HOST=localhost
