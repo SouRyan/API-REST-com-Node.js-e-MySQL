@@ -49,13 +49,60 @@ npm run dev
 
 O servidor estará disponível em `http://localhost:3000` (ou na porta que você configurou).
 
+## Documentação da API
+
+A API está documentada usando Swagger UI. Para acessar a documentação interativa, acesse:
+```
+http://localhost:3000/api-docs
+```
+
+Na documentação Swagger você encontrará:
+- Descrição detalhada de todos os endpoints
+- Estrutura dos corpos de requisição
+- Exemplos de respostas
+- Possibilidade de testar os endpoints diretamente da interface
+
 ## Endpoints da API
 
-- `GET /` - Página inicial
-- `GET /funcionarios` - Lista todos os funcionários
-- `POST /funcionarios` - Cria um novo funcionário
-- `PUT /funcionarios/:id` - Atualiza um funcionário existente
-- `DELETE /funcionarios/:id` - Remove um funcionário
+### GET /
+- **Descrição**: Página inicial da API
+- **Resposta**: Mensagem de boas-vindas
+
+### GET /funcionarios
+- **Descrição**: Lista todos os funcionários
+- **Resposta**: Array de objetos com dados dos funcionários
+
+### POST /funcionarios
+- **Descrição**: Cria um novo funcionário
+- **Corpo da Requisição**:
+  ```json
+  {
+    "nome": "string",
+    "cargo": "string",
+    "salario": "number"
+  }
+  ```
+- **Resposta**: Dados do funcionário criado
+
+### PUT /funcionarios/:id
+- **Descrição**: Atualiza um funcionário existente
+- **Parâmetros**:
+  - `id`: ID do funcionário a ser atualizado
+- **Corpo da Requisição**:
+  ```json
+  {
+    "nome": "string",
+    "cargo": "string",
+    "salario": "number"
+  }
+  ```
+- **Resposta**: Dados atualizados do funcionário
+
+### DELETE /funcionarios/:id
+- **Descrição**: Remove um funcionário
+- **Parâmetros**:
+  - `id`: ID do funcionário a ser removido
+- **Resposta**: Mensagem de confirmação
 
 ## Exemplo de uso
 
